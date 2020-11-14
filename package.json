@@ -75,7 +75,8 @@
     "react-intersection-observer": "^8.30.1",
     "react-merge-refs": "^1.1.0",
     "react-ticker": "^1.2.2",
-    "tailwindcss": "^1.9"
+    "tailwindcss": "^1.9",
+    "tailwindcss-filters": "^3.0.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^10.0.1",

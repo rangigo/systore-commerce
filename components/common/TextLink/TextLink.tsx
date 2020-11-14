@@ -6,16 +6,30 @@ interface Props {
   href: string
   children: React.ReactNode
   className?: string
+  underlined?: boolean
 }
 
-export default function TextLink({ href, children, className }: Props) {
+export default function TextLink({
+  href,
+  children,
+  className,
+  underlined,
+}: Props) {
   return (
-    <li data-testid="text-link">
-      <Link href={href}>
-        <a className={cn('no-underline text-xs leading-relaxed', className)}>
-          {children}
-        </a>
-      </Link>
-    </li>
+    <Link href={href}>
+      <a
+        data-testid="text-link"
+        className={cn(
+          'text-md md:text-xs font-serif leading-relaxed',
+          className,
+          {
+            'no-underline': !underlined,
+            underline: underlined,
+          }
+        )}
+      >
+        {children}
+      </a>
+    </Link>
   )
 }

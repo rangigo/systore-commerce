@@ -6,17 +6,17 @@ interface Props {
   className?: string
   width?: number | string
   height?: number | string
+  size?: 'sm' | 'lg'
 }
 
-const Logo = ({ className, width, height }: Props) => (
+const Logo = ({ className, width, height, size }: Props) => (
   <div className={cn('inline-block', className)}>
-    <Image
-      src="/logo.png"
-      alt="Logo Image"
+    <img
+      src={size && size === 'sm' ? '/logo-sm.png' : '/logo.png'}
+      alt="Logo"
       // The cart item image is already optimized and very small in size
-      unoptimized
-      width={width ?? '176px'}
-      height={height ?? '176px'}
+      width={width ?? '124px'}
+      height={height ?? '56px'}
     />
   </div>
 )

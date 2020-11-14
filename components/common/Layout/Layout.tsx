@@ -11,6 +11,7 @@ import { CommerceProvider } from '@bigcommerce/storefront-data-hooks'
 import { Sidebar, Button, Modal, LoadingDots } from '@components/ui'
 import type { Page } from '@bigcommerce/storefront-data-hooks/api/operations/get-all-pages'
 import { CartSidebarView } from '@components/cart'
+import SideNav from '../SideNav/SideNav'
 
 const Loading = () => (
   <div className="w-80 h-80 flex items-center text-center justify-center p-3">
@@ -64,18 +65,19 @@ const Layout: FC<Props> = ({ children, pageProps }) => {
     <CommerceProvider locale={locale}>
       <div className={cn(s.root)}>
         <Navbar />
-        <main className="fit">{children}</main>
+        {/* <SideNav /> */}
+        <main>{children}</main>
         <Footer pages={pageProps.pages} />
 
-        <Sidebar open={displaySidebar} onClose={closeSidebar}>
+        {/* <Sidebar open={displaySidebar} onClose={closeSidebar}>
           <CartSidebarView />
-        </Sidebar>
+        </Sidebar> */}
 
-        <Modal open={displayModal} onClose={closeModal}>
+        {/* <Modal open={displayModal} onClose={closeModal}>
           {modalView === 'LOGIN_VIEW' && <LoginView />}
           {modalView === 'SIGNUP_VIEW' && <SignUpView />}
           {modalView === 'FORGOT_VIEW' && <ForgotPassword />}
-        </Modal>
+        </Modal> */}
 
         <FeatureBar
           title="This site uses cookies to improve your experience. By clicking, you agree to our Privacy Policy."

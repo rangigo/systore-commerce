@@ -29,7 +29,7 @@ module.exports = {
         'hover-1': 'var(--hover-1)',
         'hover-2': 'var(--hover-2)',
         'accents-0': '#2C3E50',
-        'accents-1': 'var(--accents-1)',
+        'accents-1': '#FEFAF6',
         'accents-2': 'var(--accents-2)',
         'accents-3': 'var(--accents-3)',
         'accents-4': 'var(--accents-4)',
@@ -59,7 +59,10 @@ module.exports = {
       lineHeight: {
         'extra-loose': '2.2',
       },
-      spacing: {},
+      spacing: {
+        'logo-w-sm': '124px',
+        'logo-h-sm': '56px',
+      },
     },
   },
   plugins: [require('@tailwindcss/ui')],

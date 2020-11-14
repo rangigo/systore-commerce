@@ -6,10 +6,9 @@ import getAllProducts from '@bigcommerce/storefront-data-hooks/api/operations/ge
 import getSiteInfo from '@bigcommerce/storefront-data-hooks/api/operations/get-site-info'
 import getAllPages from '@bigcommerce/storefront-data-hooks/api/operations/get-all-pages'
 
-import Logo from '../components/ui/Logo'
-import SideNav from '@components/common/SideNav/SideNav'
-import Image from 'next/image'
 import ProductShowcase from '@components/product/ProductShowcase/ProductShowcase'
+import { Layout } from '@components/common'
+import { Container } from '@components/ui'
 
 export async function getStaticProps({
   preview,
@@ -80,16 +79,9 @@ export default function Home({}: InferGetStaticPropsType<
   typeof getStaticProps
 >) {
   return (
-    <div className="bg-primary h-screen font-serif">
-      <div className="fixed">
-        <Logo className="mb-full" />
-        <SideNav className="mt-32" />
-      </div>
-
+    <Container clean className="font-serif min-h-screen">
       <div className="text-center mx-auto pt-20">
-        <p className="uppercase text-xs font-sans text-2xs">
-          Our latest collections
-        </p>
+        <p className="uppercase font-sans text-2xs">Our latest collections</p>
         <h1 className="italic text-6xl">White Dreaming</h1>
         <h2 className="text-accents-0 mt-2 text-lg">
           Dressing well is a form of good manner
@@ -108,8 +100,8 @@ export default function Home({}: InferGetStaticPropsType<
           />
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 
-// Home.Layout = Layout
+Home.Layout = Layout
