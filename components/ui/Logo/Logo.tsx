@@ -4,8 +4,8 @@ import cn from 'classnames'
 
 interface Props {
   className?: string
-  width?: number
-  height?: number
+  width?: number | string
+  height?: number | string
 }
 
 const Logo = ({ className, width, height }: Props) => (
