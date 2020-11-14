@@ -41,3 +41,5 @@ Contact Thomas to retrieve the environtment variables.
 2. Install the dependencies: `npm i`. 
 
 3. Run `npm run dev` to build and watch for code changes.
+
+4. Checkout this [development guideline](https://www.notion.so/Development-Lifecycle-7970859372244d2694d4f04a72d17826) on our Notion to know the general steps to start contributing!
