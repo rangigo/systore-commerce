@@ -8,6 +8,8 @@ import getAllPages from '@bigcommerce/storefront-data-hooks/api/operations/get-a
 
 import Logo from '../components/ui/Logo'
 import SideNav from '@components/common/SideNav/SideNav'
+import Image from 'next/image'
+import ProductShowcase from '@components/product/ProductShowcase/ProductShowcase'
 
 export async function getStaticProps({
   preview,
@@ -78,14 +80,33 @@ export default function Home({}: InferGetStaticPropsType<
   typeof getStaticProps
 >) {
   return (
-    <div className="bg-primary h-screen flex font-serif">
-      <div className="h-full">
+    <div className="bg-primary h-screen font-serif">
+      <div className="fixed">
         <Logo className="mb-full" />
-        <SideNav />
+        <SideNav className="mt-32" />
       </div>
 
-      <div className="text-center">
-        <h3 className="uppercase text-xs font-sans">Our latest collections</h3>
+      <div className="text-center mx-auto pt-20">
+        <p className="uppercase text-xs font-sans text-2xs">
+          Our latest collections
+        </p>
+        <h1 className="italic text-6xl">White Dreaming</h1>
+        <h2 className="text-accents-0 mt-2 text-lg">
+          Dressing well is a form of good manner
+        </h2>
+        <div className="mt-6 mx-auto">
+          <ProductShowcase
+            title="ĐẦM SUÔNG VOAN HOA KEM KÈM BELT"
+            sizes={['S', 'M']}
+            src="/product1.png"
+            className="mr-6"
+          />
+          <ProductShowcase
+            title="ĐẦM SUÔNG VOAN HOA KEM KÈM BELT"
+            sizes={['S', 'M']}
+            src="/product2.png"
+          />
+        </div>
       </div>
     </div>
   )
