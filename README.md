@@ -23,7 +23,7 @@ We're using Github Projects to keep track of issues in progress and todo's. Here
 
 Next.js Commerce integrates out-of-the-box with BigCommerce. We plan to support all major ecommerce backends.
 
-## Troubleshoot
+## Local Development
 
 1. First thing you do is: <b>set your environment variables in with .env.local file in the root folder</b>
 
