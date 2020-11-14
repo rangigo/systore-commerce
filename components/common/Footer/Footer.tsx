@@ -28,10 +28,10 @@ const Footer: FC<Props> = ({ className, pages }) => {
           <div className="col-span-1 lg:col-span-2">
             <Link href="/">
               <a className="flex flex-initial items-center font-bold md:mr-24">
-                <span className="rounded-full border border-gray-700 mr-2">
+                <span className="rounded-full">
                   <Logo />
                 </span>
-                <span>ACME</span>
+                <span>SY Store</span>
               </a>
             </Link>
           </div>
