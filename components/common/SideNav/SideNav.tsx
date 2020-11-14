@@ -8,10 +8,10 @@ interface Props {
 
 export default function SideNav({ className }: Props) {
   return (
-    <nav className="text-center">
-      <ul>
+    <nav className={cn('flex justify-center', className)} data-testid="sidenav">
+      <ul className="list-none">
         <TextLink href="/collections">collections</TextLink>
-        <TextLink href="/shops">shops</TextLink>
+        <TextLink href="/shop">shop</TextLink>
         <TextLink href="/sales">sales</TextLink>
         <TextLink href="/about">about SY</TextLink>
         <TextLink href="/contact">contact</TextLink>

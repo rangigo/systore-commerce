@@ -10,9 +10,11 @@ interface Props {
 
 export default function TextLink({ href, children, className }: Props) {
   return (
-    <li>
+    <li data-testid="text-link">
       <Link href={href}>
-        <a className={cn('no-underline text-xs', className)}>{children}</a>
+        <a className={cn('no-underline text-xs leading-relaxed', className)}>
+          {children}
+        </a>
       </Link>
     </li>
   )

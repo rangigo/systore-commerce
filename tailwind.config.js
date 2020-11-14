@@ -56,6 +56,7 @@ module.exports = {
       lineHeight: {
         'extra-loose': '2.2',
       },
+      spacing: {},
     },
   },
   plugins: [require('@tailwindcss/ui')],
