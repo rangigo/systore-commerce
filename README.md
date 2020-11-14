@@ -40,7 +40,4 @@ Contact Thomas to retrieve the environtment variables.
 
 2. Install the dependencies: `npm i`. 
 
-3. Run `npm run dev` to build and watch for code changes
-
-4. The development branch is `development` (this is the branch pull requests should be made against).
-   On a release, the relevant parts of the changes in the `staging` branch are rebased into `master`.
+3. Run `npm run dev` to build and watch for code changes.
