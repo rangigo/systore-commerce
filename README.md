@@ -25,7 +25,7 @@ Next.js Commerce integrates out-of-the-box with BigCommerce. We plan to support 
 
 ## Local Development
 
-1. First thing you do is: <b>set your environment variables in with .env.local file in the root folder</b>
+1. First thing you do is: <b>set your environment variables with .env.local file in the root folder</b>
 
 .env.local
 ```sh
