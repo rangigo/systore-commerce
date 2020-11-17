@@ -1,6 +1,6 @@
 # Next.js SY Store Commerce
 
-SY Store Commerce is bootstraped with Next.js Commerce starter kit [nextjs.org/commerce](https://nextjs.org/commerce)
+SY Store Commerce is bootstrapped with Next.js Commerce starter kit [nextjs.org/commerce](https://nextjs.org/commerce)
 
 Demo live at: [systore.vercel.app](https://systore.vercel.app/)
 
