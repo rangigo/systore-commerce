@@ -25,7 +25,7 @@ const Navbar = () => {
   }, [handleScroll])
 
   return (
-    <div className="fixed ml-0 mt-0 w-full">
+    <div className="fixed ml-0 mt-0 w-full z-50">
       <div className="bg-accents-1 md:bg-transparent flex items-center justify-between text-center px-5 md:px-0 py-2 md:py-0">
         <div
           onClick={() => setIsDropDownOpen(!isDropdownOpen)}

@@ -30,6 +30,7 @@ export default function ProductShowcase({
         width={width ?? '352px'}
         height={height ?? '627px'}
       />
+
       <p className="capitalize text-2xs text-left font-sans">
         <span className="mr-2">{title}</span>|
         <span className="ml-2">
