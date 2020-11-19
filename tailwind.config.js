@@ -13,12 +13,31 @@ module.exports = {
       sans: ['Lato', 'sans-serif'],
       serif: [`"Playfair Display"`, 'serif'],
     },
+    filter: {
+      // defaults to {}
+      none: 'none',
+      grayscale: 'grayscale(1)',
+      invert: 'invert(1)',
+      sepia: 'sepia(1)',
+    },
+    backdropFilter: {
+      // defaults to {}
+      none: 'none',
+      blur: 'blur(16px)',
+    },
     extend: {
       fontSize: {
         '2xs': '0.625rem',
       },
       maxWidth: {
         '8xl': '1920px',
+      },
+      backgroundOpacity: {
+        10: '0.1',
+        20: '0.2',
+        80: '0.8',
+        85: '0.85',
+        95: '0.95',
       },
       colors: {
         primary: '#FCF4EB',
@@ -65,5 +84,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/ui')],
+  variants: {
+    filter: ['responsive'], // defaults to ['responsive']
+    backdropFilter: ['responsive'], // defaults to ['responsive']
+  },
+  plugins: [require('@tailwindcss/ui'), require('tailwindcss-filters')],
 }

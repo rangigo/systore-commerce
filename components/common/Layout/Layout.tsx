@@ -4,14 +4,14 @@ import s from './Layout.module.css'
 import { useRouter } from 'next/router'
 import React, { FC } from 'react'
 import { useUI } from '@components/ui/context'
-import { Navbar, Footer } from '@components/common'
+import { MobileNav, Footer } from '@components/common'
 import { usePreventScroll } from '@react-aria/overlays'
 import { useAcceptCookies } from '@lib/hooks/useAcceptCookies'
 import { CommerceProvider } from '@bigcommerce/storefront-data-hooks'
 import { Sidebar, Button, Modal, LoadingDots } from '@components/ui'
 import type { Page } from '@bigcommerce/storefront-data-hooks/api/operations/get-all-pages'
 import { CartSidebarView } from '@components/cart'
-import SideNav from '../SideNav/SideNav'
+import SideNav from '../SideNav'
 
 const Loading = () => (
   <div className="w-80 h-80 flex items-center text-center justify-center p-3">
@@ -64,8 +64,13 @@ const Layout: FC<Props> = ({ children, pageProps }) => {
   return (
     <CommerceProvider locale={locale}>
       <div className={cn(s.root)}>
-        <Navbar />
-        {/* <SideNav /> */}
+        <div className="block md:hidden">
+          <MobileNav />
+        </div>
+        <div>
+          <SideNav className="hidden md:block" />
+        </div>
+
         <main>{children}</main>
         <Footer pages={pageProps.pages} />
 
