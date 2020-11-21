@@ -1,3 +1,5 @@
+<a href="https://wannahireme.com/rangigo" target="_blank"><img src="https://wannahireme.com/assets/btnimages/pacifico_orange.png" alt="Hire Me" style="height: 60px !important;width: 217px !important;" ></a>
+
 # Next.js SY Store Commerce
 
 SY Store Commerce is bootstrapped with Next.js Commerce starter kit [nextjs.org/commerce](https://nextjs.org/commerce)
