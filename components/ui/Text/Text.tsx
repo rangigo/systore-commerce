@@ -1,58 +1,17 @@
-import React, {
-  FunctionComponent,
-  JSXElementConstructor,
-  CSSProperties,
-} from 'react'
+import React from 'react'
 import cn from 'classnames'
-import s from './Text.module.css'
+import TComponent from '@components/types'
 
-interface Props {
-  variant?: Variant
-  className?: string
-  style?: CSSProperties
-  children: React.ReactNode | any
-}
+interface Props extends TComponent {}
 
-type Variant = 'heading' | 'body' | 'pageHeading' | 'sectionHeading'
-
-const Text: FunctionComponent<Props> = ({
-  style,
-  className = '',
-  variant = 'body',
+export default function Text({
   children,
-}) => {
-  const componentsMap: {
-    [P in Variant]: React.ComponentType<any> | string
-  } = {
-    body: 'p',
-    heading: 'h1',
-    pageHeading: 'h1',
-    sectionHeading: 'h2',
-  }
-
-  const Component:
-    | JSXElementConstructor<any>
-    | React.ReactElement<any>
-    | React.ComponentType<any>
-    | string = componentsMap![variant!]
-
+  className,
+  'data-testid': testId,
+}: Props) {
   return (
-    <Component
-      className={cn(
-        s.root,
-        {
-          [s.body]: variant === 'body',
-          [s.heading]: variant === 'heading',
-          [s.pageHeading]: variant === 'pageHeading',
-          [s.sectionHeading]: variant === 'sectionHeading',
-        },
-        className
-      )}
-      style={style}
-    >
+    <span data-testid={testId || 'text'} className={cn('', className)}>
       {children}
-    </Component>
+    </span>
   )
 }
-
-export default Text

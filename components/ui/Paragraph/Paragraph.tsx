@@ -4,19 +4,14 @@ import TComponent from '@components/types'
 
 interface Props extends TComponent {}
 
-export default function Button({
+export default function Paragraph({
   'data-testid': testId,
   className,
   children,
-  onClick,
 }: Props) {
   return (
-    <button
-      onClick={onClick}
-      data-testid={testId || 'button'}
-      className={cn('', className)}
-    >
+    <p data-testid={testId || 'paragraph'} className={cn('', className)}>
       {children}
-    </button>
+    </p>
   )
 }

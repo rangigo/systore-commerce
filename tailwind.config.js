@@ -41,7 +41,7 @@ module.exports = {
       },
       colors: {
         primary: '#FCF4EB',
-        'primary-2': 'var(--primary-2)',
+        'primary-2': '',
         secondary: 'var(--secondary)',
         'secondary-2': 'var(--secondary-2)',
         hover: 'var(--hover)',
@@ -88,5 +88,5 @@ module.exports = {
     filter: ['responsive'], // defaults to ['responsive']
     backdropFilter: ['responsive'], // defaults to ['responsive']
   },
-  plugins: [require('@tailwindcss/ui'), require('tailwindcss-filters')],
+  plugins: [require('tailwindcss-filters')],
 }

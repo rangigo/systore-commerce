@@ -19,9 +19,17 @@ function Path(props: any) {
   )
 }
 
-export default function MenuToggle({ toggle, className }: Props) {
+export default function Hamburger({
+  toggle,
+  className,
+  'data-testid': testId,
+}: Props) {
   return (
-    <button className={cn('focus:outline-none', className)} onClick={toggle}>
+    <button
+      data-testid={testId || 'hamburger'}
+      className={cn('focus:outline-none', className)}
+      onClick={toggle}
+    >
       <svg width="23" height="23" viewBox="0 0 23 23">
         <Path
           variants={{

@@ -8,7 +8,8 @@ import getAllPages from '@bigcommerce/storefront-data-hooks/api/operations/get-a
 
 import ProductShowcase from '@components/product/ProductShowcase/ProductShowcase'
 import { Layout } from '@components/common'
-import { Container } from '@components/ui'
+import { Box, Container } from '@components/ui'
+import Hero from '@components/landing/Hero'
 
 export async function getStaticProps({
   preview,
@@ -79,28 +80,9 @@ export default function Home({}: InferGetStaticPropsType<
   typeof getStaticProps
 >) {
   return (
-    <Container clean className="font-serif min-h-screen">
-      <div className="text-center mx-auto pt-20">
-        <p className="uppercase font-sans text-2xs">Our latest collections</p>
-        <h1 className="italic text-6xl">White Dreaming</h1>
-        <h2 className="text-accents-0 mt-2 text-lg">
-          Dressing well is a form of good manner
-        </h2>
-        <div className="mt-6 mx-auto">
-          <ProductShowcase
-            title="ĐẦM SUÔNG VOAN HOA KEM KÈM BELT"
-            sizes={['S', 'M']}
-            src="/product1.png"
-            className="mr-6"
-          />
-          <ProductShowcase
-            title="ĐẦM SUÔNG VOAN HOA KEM KÈM BELT"
-            sizes={['S', 'M']}
-            src="/product2.png"
-          />
-        </div>
-      </div>
-    </Container>
+    <div className="font-serif">
+      <Hero />
+    </div>
   )
 }
 

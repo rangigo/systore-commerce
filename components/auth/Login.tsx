@@ -1,8 +1,9 @@
+import React from 'react'
 import TComponent from '@components/types'
 import { Box } from '@components/ui'
-import React from 'react'
+
 interface Props extends TComponent {}
 
-export default function ForgotPassword() {
-  return <Box>Forgot Password</Box>
+export default function Login() {
+  return <Box>Login</Box>
 }

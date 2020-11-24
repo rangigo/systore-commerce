@@ -1,25 +1,24 @@
 import React from 'react'
 import cn from 'classnames'
-import { Logo, TextLink } from '@components/ui'
+import { Logo, Link } from '@components/ui'
+import TComponent from '@components/types'
 
-interface Props {
-  className?: string
-}
+interface Props extends TComponent {}
 
-export default function SideNav({ className }: Props) {
+export default function SideNav({ className, 'data-testid': testId }: Props) {
   return (
-    <div className={cn('fixed z-30', className)}>
+    <div
+      data-testid={testId || 'sidenav'}
+      className={cn('fixed z-30', className)}
+    >
       <Logo size="lg" width={176} height={176} className="mb-full" />
-      <nav
-        className="flex justify-center mr-5 lg:mr-10 mt-32"
-        data-testid="sidenav"
-      >
-        <ul className="list-none flex flex-col">
-          <TextLink href="/collections">collections</TextLink>
-          <TextLink href="/shop">shop</TextLink>
-          <TextLink href="/sales">sales</TextLink>
-          <TextLink href="/about">about SY</TextLink>
-          <TextLink href="/contact">contact</TextLink>
+      <nav className="flex justify-center lg:mr-10 mt-60">
+        <ul className="list-none grid grid-cols-1 gap-y-2">
+          <Link href="/collections">collections</Link>
+          <Link href="/shop">shop</Link>
+          <Link href="/sales">sales</Link>
+          <Link href="/about">about SY</Link>
+          <Link href="/contact">contact</Link>
         </ul>
       </nav>
     </div>
