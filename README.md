@@ -1,4 +1,4 @@
-<a href="https://wannahireme.com/rage_phuocn" target="_blank"><img src="https://wannahireme.com/assets/btnimages/pacifico_orange.png" alt="Hire Me" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://wannahireme.com/rage" target="_blank"><img src="https://wannahireme.com/assets/btnimages/pacifico_orange.png" alt="Hire Me" style="height: 60px !important;width: 217px !important;" ></a>
 
 # Next.js SY Store Commerce
 
