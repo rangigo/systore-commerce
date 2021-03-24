@@ -3,12 +3,14 @@ import type {
   GetStaticPropsContext,
   InferGetStaticPropsType,
 } from 'next'
-import { getConfig } from '@bigcommerce/storefront-data-hooks/api'
-import getPage from '@bigcommerce/storefront-data-hooks/api/operations/get-page'
-import getAllPages from '@bigcommerce/storefront-data-hooks/api/operations/get-all-pages'
+import { Text } from '@components/ui'
+import { Layout } from '@components/common'
 import getSlug from '@lib/get-slug'
 import { missingLocaleInPages } from '@lib/usage-warns'
-import { Layout, HTMLContent } from '@components/common'
+import { getConfig } from '@framework/api'
+import getPage from '@framework/common/get-page'
+import getAllPages from '@framework/common/get-all-pages'
+import { defaultPageProps } from '@lib/defaults'
 
 export async function getStaticProps({
   preview,
@@ -23,7 +25,8 @@ export async function getStaticProps({
   const pageItem = pages.find((p) => (p.url ? getSlug(p.url) === slug : false))
   const data =
     pageItem &&
-    (await getPage({ variables: { id: pageItem.id! }, config, preview }))
+    // TODO: Shopify - Fix this type
+    (await getPage({ variables: { id: pageItem.id! } as any, config, preview }))
   const page = data?.page
 
   if (!page) {
@@ -32,7 +35,7 @@ export async function getStaticProps({
   }
 
   return {
-    props: { pages, page },
+    props: { ...defaultPageProps, pages, page },
     revalidate: 60 * 60, // Every hour
   }
 }
@@ -63,8 +66,8 @@ export default function Pages({
   page,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="max-w-2xl mx-auto py-20">
-      {page?.body && <HTMLContent html={page.body} />}
+    <div className="max-w-2xl mx-8 sm:mx-auto py-20">
+      {page?.body && <Text html={page.body} />}
     </div>
   )
 }

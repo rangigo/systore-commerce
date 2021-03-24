@@ -1,12 +1,18 @@
 module.exports = {
   future: {
     purgeLayersByDefault: true,
+    applyComplexClasses: true,
   },
   purge: {
     content: [
       './pages/**/*.{js,ts,jsx,tsx}',
       './components/**/*.{js,ts,jsx,tsx}',
     ],
+    options: {
+      safelist: {
+        standard: ['outline-none'],
+      },
+    },
   },
   theme: {
     extend: {
@@ -45,14 +51,16 @@ module.exports = {
         secondary: 'var(--text-secondary)',
       },
       boxShadow: {
-        'outline-2': '0 0 0 2px var(--accents-2)',
+        'outline-normal': '0 0 0 2px var(--accents-2)',
         magical:
           'rgba(0, 0, 0, 0.02) 0px 30px 30px, rgba(0, 0, 0, 0.03) 0px 0px 8px, rgba(0, 0, 0, 0.05) 0px 1px 0px',
       },
       lineHeight: {
-        'extra-loose': '2.2'
-      }
+        'extra-loose': '2.2',
+      },
+      scale: {
+        120: '1.2',
+      },
     },
   },
-  plugins: [require('@tailwindcss/ui')],
 }

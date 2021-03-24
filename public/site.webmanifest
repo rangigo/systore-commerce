@@ -1,7 +1,7 @@
 {
-  "name": "SY Store Commerce",
-  "short_name": "SY Store Commerce",
-  "description": "Powered by Next.js Commerce -> https://www.nextjs.org/commerce",
+  "name": "Next.js Commerce",
+  "short_name": "Next.js Commerce",
+  "description": "Next.js Commerce -> https://www.nextjs.org/commerce",
   "display": "standalone",
   "start_url": "/",
   "theme_color": "#fff",
@@ -9,13 +9,13 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/systore-icon.jpg",
-      "type": "image/jpg",
+      "src": "/icon-192x192.png",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/systore-icon.jpg",
-      "type": "image/jpg",
+      "src": "/icon-512x512.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ]
